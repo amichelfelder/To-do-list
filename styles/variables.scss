@@ -1,0 +1,58 @@
+$blue: #0099ff;
+$transparent-blue: rgba($blue, 0.05);
+$black: #333333;
+$white: #ffffff;
+$grey: #c7c7c7;
+$lightgrey: #fafafa;
+$shadow: 2px 2px 4px rgba(0, 0, 0, 0.16);
+
+$test: 100px;
+
+@mixin card-align($width) {
+}
+@mixin relative($float) {
+  position: relative;
+  float: $float;
+  width: 100%;
+}
+
+@mixin card($decoration) {
+  @include relative(left);
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: $shadow;
+  padding: 20px 30px;
+  margin: 20px 0;
+  background-color: $white;
+  //   display: flex;
+  align-items: center;
+
+  .task-text {
+    @include relative(left);
+    align-self: flex-start;
+    padding-right: 15px;
+    box-sizing: border-box;
+
+    p {
+      margin: 0;
+      text-decoration: $decoration;
+      width: 100%;
+    }
+    input {
+      width: 100%;
+    }
+  }
+
+  .task-btns {
+    @include relative(right);
+    border-left: 1px solid $grey;
+    padding-left: 10px;
+    align-self: center;
+    width: auto;
+
+    button {
+      margin: 0 5px;
+    }
+  }
+}

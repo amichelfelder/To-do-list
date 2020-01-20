@@ -1,0 +1,127 @@
+@import "variables.scss";
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  svg {
+    @include relative(left);
+  }
+}
+
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0px;
+  color: $black;
+}
+.blank {
+  font-weight: 700; //me baje el bold de la font, por eso solo el número
+  font-size: 16px;
+  color: $blue;
+  text-align: center;
+}
+.line {
+  text-decoration: line-through;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+input {
+  border: 1px;
+  border-color: $grey;
+  width: calc(100% - 20px);
+  border-radius: 8px;
+  border-style: solid;
+  align-content: center;
+  padding: 10px;
+  font-size: 14px;
+  height: 40px;
+  box-sizing: border-box;
+  color: $black;
+  font-family: "Raleway", sans-serif;
+  &::placeholder {
+    color: $grey;
+  }
+}
+.tasks-container {
+  @include relative(left);
+  background-color: $transparent-blue;
+  height: calc(100vh - 219.27px);
+  overflow: scroll;
+  padding: 25px 10%;
+  width: 100%;
+  box-sizing: border-box;
+}
+.add-task-container {
+  @include relative(left);
+  padding: 30px 10%;
+  box-sizing: border-box;
+  h1 {
+    color: $blue;
+    margin: 25px 0;
+  }
+  .add-task-input-container {
+    @include relative(left);
+    .add-task-input {
+      width: calc(100% - 20px);
+      border-radius: 8px 0 0 8px;
+    }
+    .add-task-btn {
+      background-color: $blue;
+      border-radius: 50%;
+      padding: 10px 12px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.pending-task-container {
+  @include relative(left);
+  .pending-task-list {
+    @include relative(left);
+    .task {
+      @include card(none);
+      .task-text {
+        width: calc(100% - 138.13px);
+      }
+    }
+  }
+}
+.completed-task-container {
+  @include relative(left);
+  padding-top: 25px;
+  margin-top: 35px;
+  border-top: 1px solid $grey;
+  .completed-task-list {
+    @include relative(left);
+    .task {
+      @include card(line-through);
+      .task-text {
+        width: calc(100% - 94.31px);
+      }
+    }
+  }
+}
+.no-tasks {
+  @include relative(left);
+  color: $blue;
+  padding: 50px 0;
+  text-align: center;
+  h2 {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BEST to-do list EVER</title>
+    <link rel="stylesheet" href="styles/todo.css">
+    <script type="text/javascript" src="todo.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="styles/images/list.png" />
+</head>
+
+<body onload="onLoad()">
+    <header class="add-task-container">
+        <h1>Mi lista de tareas</h1>
+        <h2 class="section-title">Agregá una tarea</h2>
+        <div class="add-task-input-container">
+            <input type="text" value="" onkeypress="keyPress(event)" placeholder="Ingrese una tarea..." id="item">
+            <button class="add-task-btn" type="button" id="add" onclick="addTask()"><img src="styles/images/add.svg"
+                    alt=""></button>
+        </div>
+    </header>
+    <div class="tasks-container">
+        <div class="pending-task-container">
+            <!-- <h2 class="section-title">Tareas pendientes</h2> -->
+            <ul id="todo" class="pending-task-list">
+                <!-- <li class="task">
+                    <div class="task-text">
+                        <p>holis</p> 
+                       <input type="text"> 
+                    </div>
+                    <div class="task-btns"> 
+                        <button><img id='svg' src="styles/images/edit.svg"></button> nice to have pero ni idea como hacer, investigare
+                        <button><img id='svg-trash' src="styles/images/trash.svg"></button>
+                        <button><img id='svg-pending' src="styles/images/pending.svg"></button>
+                    </div>
+                </li> -->
+            </ul>
+            <!-- <div class="no-tasks">
+                <h2>¡Excelente!</h2>
+                <p>No tenés ninguna tarea pendiente</p>
+            </div> -->
+        </div>
+        <div class="completed-task-container">
+            <!-- <h2 class="section-title">Tareas completadas</h2> -->
+            <ul id="completed" class="completed-task-list">
+
+                <!--<li class="task">
+                    <div class="task-text">
+                        <p>chau</p>
+                    </div>
+                    <div class="task-btns">
+                        <button><img src="styles/images/trash.svg"></button>
+                        <button><img src="styles/images/completed.svg"></button>
+                    </div> 
+
+                </li>-->
+            </ul>
+            <!-- <div class="no-tasks">
+                <h2>¡Ánimo!</h2>
+                <p>Cuando completes tus tareas van a aparecer acá</p>-->
+        </div>
+    </div>
+</body>
+
+</html>
